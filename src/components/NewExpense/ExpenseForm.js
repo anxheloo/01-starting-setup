@@ -43,6 +43,20 @@ const ExpenseForm = (props) => {
     // });
   };
 
+  //INSTEAD OF USING THE ABOVE WAYs OF CREATING A HANDLER FUNCTION FOR EVERY INPUT CHANGE
+  //WE CAN USE A GENERIC METHOD LIKE BELOW AND IN PLACE OF "onChange={titleChangeHandler}", WE USE
+  //"onChange={(event) => inputChangeHandler("title", event.target.value)}"
+
+  // const inputChangeHandler = (identifier, value) => {
+  //   if(identifier === 'title'){
+  //     setEnteredTitle(value);
+  //   } else if( identifier === 'date'){
+  //     setEnteredDate(value)
+  //   } else{
+  //     setEnteredAmount(value)
+  //   }
+  // }
+
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -56,6 +70,8 @@ const ExpenseForm = (props) => {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+
+    console.log("Inside ExpenseForm", expenseData);
   };
 
   return (
