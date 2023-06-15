@@ -34,9 +34,6 @@ function App() {
     });
   };
 
-  console.log("Printing expenses: ", expenses);
-  console.log("Printing setExpenses: ", setExpenses);
-
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
